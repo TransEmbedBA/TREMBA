@@ -14,7 +14,7 @@ Please download the weight of the generator from https://drive.google.com/file/d
 Please download the test images from https://drive.google.com/file/d/1Gs_Rw-BDwuEn5FcWigYP5ZM9StCufZdP/view?usp=sharing and extract it under [dataset/Imagenet](dataset/Imagenet)
 ## Reproducing the results
 
-###Imagenet targeted attack:
+### Imagenet targeted attack:
 
 For reproducing the result of attacking class 0 (tench), you can run the code using the 
 The results can be reproduced using the following command:
@@ -32,7 +32,7 @@ If you want to attack another class, please change in *target_class* and *genera
 | 80 (Ruffed grouse) | Imagenet\_VGG16_Resnet18\_Squeezenet\_Googlenet\_target\_80 |
 | 100 (Black swan) | Imagenet\_VGG16_Resnet18\_Squeezenet\_Googlenet\_target\_100 |
 
-###Imagenet un-targeted attack:
+### Imagenet un-targeted attack:
 
 For reproducing the result of un-targeted, you can run the code using the 
 The results can be reproduced using the following command:
@@ -41,7 +41,7 @@ The results can be reproduced using the following command:
 python attack.py --device cuda:0 --config config/attack_untarget.json --model_name [ VGG19 | Resnet34 | Densenet121 | Mobilenet ]
 ```
 
-###Attack defense model:
+### Attack defense model:
 
 Please download the weight of the Imagenet model from https://drive.google.com/file/d/1nNRhzijZnHjHJ6SkFVTaFxDO-YnxiAhZ/view?usp=sharing and extract it in the root folder;
 
@@ -59,7 +59,7 @@ About the attack algorithm, `config/attack_defense_untarget.json` corresponds to
 The result in store in the output folder with npy format recording the queries need to attack each image. The image with query larger than 50000 means the attack is failed.
  
  
-###Training the Generator
+### Training the Generator
 
 Please download the train images from https://drive.google.com/file/d/1R_aC1onf0Yv77cL0OHjJ2VeXjrIbgKXb/view?usp=sharing and extract it under [dataset/Imagenet](dataset/Imagenet)
 
