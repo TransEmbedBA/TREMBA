@@ -1,0 +1,33 @@
+{
+  "batch_size": 64,
+  "train_path": "./dataset/Imagenet/Sample_1000",
+  "data_path": "./dataset/Imagenet/Sample_1000",
+  "epsilon": 0.03125,
+  "margin": 5.0,
+  "target": false,
+  "model_name": "Adv_Denoise_Resnext101",
+  "generator_name": "Imagenet_Adv_Denoise_Resnet152_untarget",
+  
+  "print_log": false,
+  "log_interval": 10,
+  
+  "sample_size": 20,
+  "num_iters": 2500,
+  "sigma": 0.2,
+  "lr": 5.0,  
+  "lr_min": 0.01,
+  "lr_decay": 2.0,
+  "momentum": 0.8,
+  "plateau_length": 20,
+  "plateau_overhead": 0.1,
+    
+  "save_path": "output",
+  "save_prefix": "TransEmbedBA_Imagenet_Defense_OSP_Untarget",
+  
+  "defense": true,
+  "white_box_iters": 100,
+  "white_box_lr": 2.0,
+  "white_box_margin": 100,
+  "source_model_name": "Adv_Denoise_Resnet152",
+  "OSP": true
+}

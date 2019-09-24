@@ -4,10 +4,9 @@
   "data_path": "./dataset/Imagenet/Sample_1000",
   "epsilon": 0.03125,
   "margin": 5.0,
-  "target": true,
-  "target_class": 0,
+  "target": false,
   "model_name": "Densenet121",
-  "generator_name": "Imagenet_VGG16_Resnet18_Squeezenet_Googlenet_target_0",
+  "generator_name": "Imagenet_VGG16_Resnet18_Squeezenet_Googlenet_untarget",
   
   "print_log": false,
   "log_interval": 10,
@@ -15,13 +14,13 @@
   "sample_size": 20,
   "num_iters": 2500,
   "sigma": 1.0,
-  "lr": 3.0,
+  "lr": 5.0,  
   "lr_min": 0.1,
   "lr_decay": 2.0,
   "momentum": 0.0,
-  "plateau_length": 30,
-  "plateau_overhead": 0.1,
+  "plateau_length": 20,
+  "plateau_overhead": 0.3,
     
   "save_path": "output",
-  "save_prefix": "TransEmbedBA_Imagenet_Target"
+  "save_prefix": "TransEmbedBA_Imagenet_Untarget"
 }

@@ -1,0 +1,19 @@
+{
+  "data_path": "./dataset/Imagenet/Sample_1000",
+  "train_path": "./dataset/Imagenet/Sample_49000",
+  "epsilon": 0.03125,
+  "learning_rate_G": 0.01,
+  "batch_size": 64,
+  "momentum": 0.9,
+  "epochs": 500,
+  "schedule": 10,
+  "gamma": 0.5,
+  "test_bs": 32,
+  "target": true,
+  "target_class": 0,
+
+  "save_suffix": "",
+  "model_name": ["VGG16", "Resnet18", "Squeezenet", "Googlenet"],
+  "margin": 200.0,
+  "log_interval": 100
+}
