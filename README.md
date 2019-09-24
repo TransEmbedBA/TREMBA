@@ -54,7 +54,7 @@ python attack.py --device cuda:0 --config [config/attack_defense_untarget.json|c
 ```
 
 
-About the attack algorithm, `config/attack_defense_untarget.json` corresponds to TransEmbedBA and `config/attack_defense_OSP_untarget.json` corresponds to TransEmbedBA$_{OSP}$.
+About the attack algorithm, `config/attack_defense_untarget.json` corresponds to TREMBA and `config/attack_defense_OSP_untarget.json` corresponds to TREMBA$_{OSP}$.
 
 The result in store in the output folder with npy format recording the queries need to attack each image. The image with query larger than 50000 means the attack is failed.
  
