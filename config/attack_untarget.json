@@ -22,5 +22,5 @@
   "plateau_overhead": 0.3,
     
   "save_path": "output",
-  "save_prefix": "TransEmbedBA_Imagenet_Untarget"
+  "save_prefix": "TREMBA_Imagenet_Untarget"
 }

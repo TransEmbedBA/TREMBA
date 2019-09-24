@@ -22,7 +22,7 @@
   "plateau_overhead": 0.1,
 
   "save_path": "output",
-  "save_prefix": "TransEmbedBA_Imagenet_Defense_Untarget",
+  "save_prefix": "TREMBA_Imagenet_Defense_Untarget",
   
   "defense": true
 }
