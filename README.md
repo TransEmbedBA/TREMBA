@@ -20,7 +20,7 @@ For reproducing the result of attacking class 0 (tench), you can run the code us
 The results can be reproduced using the following command:
 
 ```
-python attack.py --device cuda:0 --config config/attack_target.json --model_name [ VGG19 | Resnet34 | Densenet121 | Mobilenet ]
+python attack.py --device cuda:0 --config config/attack_target.json --model_name [VGG19|Resnet34| Densenet121|Mobilenet]
 ```
 If you want to attack another class, please change in *target_class* and *generator_name* in the [config/attack_target.json](config/attack_target.json). Here is the list of the *target_class* and its corresponding *generator_name*
 
@@ -38,7 +38,7 @@ For reproducing the result of un-targeted, you can run the code using the
 The results can be reproduced using the following command:
 
 ```
-python attack.py --device cuda:0 --config config/attack_untarget.json --model_name [ VGG19 | Resnet34 | Densenet121 | Mobilenet ]
+python attack.py --device cuda:0 --config config/attack_untarget.json --model_name [VGG19|Resnet34|Densenet121|Mobilenet]
 ```
 
 ### Attack defense model:
@@ -50,11 +50,11 @@ The results can be reproduced using the following comman
 d:
 
 ```
-python attack.py --device cuda:0 --config [ config/attack_defense_untarget.json | config/attack_defense_OSP_untarget.json ] 
+python attack.py --device cuda:0 --config [config/attack_defense_untarget.json|config/attack_defense_OSP_untarget.json] 
 ```
 
 
-About the attack algorithm, `config/attack_defense_untarget.json` corresponds to EmbedBA and `config/attack_defense_OSP_untarget.json` corresponds to EmbedBA$_{OSP}$.
+About the attack algorithm, `config/attack_defense_untarget.json` corresponds to TransEmbedBA and `config/attack_defense_OSP_untarget.json` corresponds to TransEmbedBA$_{OSP}$.
 
 The result in store in the output folder with npy format recording the queries need to attack each image. The image with query larger than 50000 means the attack is failed.
  
@@ -68,12 +68,12 @@ We need two gpus to train the generator for un-targeted and targeted attack, fou
 For training the generator for un-targeted and targeted attack, the command is 
 
 ```
-python train_generator.py --config [ config/train_untarget.json | config/train_target.json ] --device 0 1
+python train_generator.py --config [config/train_untarget.json|config/train_target.json] --device 0 1
 ```
 
 `config/train_untarget.json` corresponds the generator for un-targeted attack and `config/train_target.json` corresponds the generator for un-targeted attack. You may change to `target_class` in `config/train_target.json` to train the generator for attacking different class.
 
-For training the generator for un-targeted and targeted attack, the command is 
+For training the generator for the defened network, the command is 
 
 ```
 python train_generator.py --config config/train_defense_untarget.json --device 0 1 2 3
