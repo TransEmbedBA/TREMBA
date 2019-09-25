@@ -30,6 +30,9 @@ def EmbedBA(function, encoder, decoder, image, label, config, latent=None):
             success = torch.argmax(logit, dim=1) !=label
         last_loss.append(loss.item())
 
+        if function.current_counts > 50000:
+            break
+        
         if bool(success.item()):
             return True, torch.clamp(image+perturbation, 0, 1)
 
@@ -105,11 +108,7 @@ if 'OSP' in state:
             s_model
         )
 
-if state['model_name'] == "Resnet50":
-    pretrained_model = models.resnet50(pretrained=True)
-elif state['model_name'] == "VGG16":
-    pretrained_model = models.vgg16_bn(pretrained=True)
-elif state['model_name'] == 'Resnet34':
+if state['model_name'] == 'Resnet34':
     pretrained_model = models.resnet34(pretrained=True)
 elif state['model_name'] == 'VGG19':
     pretrained_model = models.vgg19_bn(pretrained=True)

@@ -28,14 +28,8 @@ if __name__ == '__main__':
     nets = []
     for model_name in state['model_name']:
         print(model_name)
-        if model_name == "Resnet50":
-            pretrained_model = models.resnet50(pretrained=True)
-        elif model_name == "VGG16":
+        if model_name == "VGG16":
             pretrained_model = models.vgg16_bn(pretrained=True)
-        elif model_name == 'Resnet34':
-            pretrained_model = models.resnet34(pretrained=True)
-        elif model_name == 'VGG19':
-            pretrained_model = models.vgg19_bn(pretrained=True)
         elif model_name == 'Resnet18':
             pretrained_model = models.resnet18(pretrained=True)
         elif model_name == 'Squeezenet':
