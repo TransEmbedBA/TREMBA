@@ -1,7 +1,7 @@
 # Black-Box Adversarial Attack with Transferable Model-based Embedding
 
-This repository contains the code for reproducing the experimental results of attacking Imagenet dataset, of our submission: *Black-Box Adversarial Attack with Transferable Model-based Embedding*.
-
+This repository contains the code for reproducing the experimental results of attacking Imagenet dataset, of our submission: *Black-Box Adversarial Attack with Transferable Model-based Embedding*. 
+https://openreview.net/forum?id=SJxhNTNYwB
 
 ## Requirements
 
@@ -81,3 +81,14 @@ python train_generator.py --config config/train_defense_untarget.json --device 0
 
 The weight for generator will be stored in [G_weight](G_weight)
 
+### Citation
+
+```
+@inproceedings{Huang2020Black-Box,
+    title={Black-Box Adversarial Attack with Transferable Model-based Embedding},
+    author={Zhichao Huang and Tong Zhang},
+    booktitle={International Conference on Learning Representations},
+    year={2020},
+    url={https://openreview.net/forum?id=SJxhNTNYwB}
+}
+```
